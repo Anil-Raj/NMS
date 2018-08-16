@@ -1,0 +1,20 @@
+.headercolor
+{
+background-color: #2EE3EA;
+}
+
+.navbar-nav >.nav-item >.label.label-info 
+{
+    font-size: 15px;
+}
+
+.navbar-nav >.nav-item
+{
+margin-right: 10px; 
+}
+
+#reportlist{
+ font-size: 15px;
+    width: 100%;
+
+}

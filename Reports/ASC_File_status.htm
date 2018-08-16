@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href=".\css\bootstrap.min.css" rel="stylesheet">
+	<link href=".\css\dataTables.bootstrap.min.css" rel="stylesheet">
+	<link href=".\css\color.css" rel="stylesheet">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+
+  </head>
+  <body>
+  <div class="container-fluid">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">	</script>
+	<script language="JavaScript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src=".\js\bootstrap.min.js"></script>
+
+
+
+ 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <img src=".\img\NMS-Logo.PNG" alt="NMSlogo" style="width:10%;">
+  </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="label label-info" href="./ASC_File_status.htm">Animal Supply Comapany</a>
+    </li>
+    <li class="nav-item">
+      <a class="label label-info p" href="./Rand.html">Rand Financials</a>
+    </li>
+    <li class="nav-item">
+      <a class="label label-info p" href="./TTX.html"> <b>TTX </b></a>
+    </li>
+  </ul>
+</nav>
+
+	<div class="row">
+    <div class="col-sm-3 col-md-6 col-lg-3">
+    				
+                 <ul class="nav nav-pills nav-stacked">
+						<li id="reportlist"><a href="./ASC_File_status.htm">ASC File status</a></li>
+						<li id="reportlist"><a href="./Recovery_Services_Vaults_Backup_job_status.htm">Recovery Services Vaults Backup job status</a></li>
+						<li id="reportlist"><a href="./Daily_Alert_history_check.htm">Daily Alert history check</a></li>
+				</ul>
+    </div>
+
+	<div class="col-sm-9 col-md-6 col-lg-9">
+	<h3>ASC File status</h3>
+	<select id="selectfield">
+	<option value="All" selected="selected" >All</option>
+	<option value="Succeeded">Succeeded</option>
+	<option value="Failed">File Failed</option>
+	
+	</select>	
+
+	&nbsp&nbsp&nbsp<input type="text" id="myInput" placeholder="Please enter the value for search.....">
+	</br></br></br>
+	<table class="table table-bordered" id="mydata">
+					
+	<tr id="header">
+    <th class="headercolor">Job Name</th>
+    <th class="headercolor">File Name</th> 
+    <th class="headercolor">File Date</th>
+	<th class="headercolor">File Status</th>
+	<th class="headercolor">File Count</th>		
+    </tr>
+
+
+
+
+<tr position="Succeeded">
+     <td>CustomerSync-West</td>
+    <td>CustomerSync-West-2018-08-10T08:45:57.1302874Z-08586677161304890397667293020CU05.json</td>
+	<td>08/10/2018 08:45:57 +00:00</td>     
+	<td>File Succeeded</td>
+	<td>1</td>
+  </tr>
+ <tr position="Succeeded">
+     <td>ItemBalance-B2B</td>
+    <td>CustomerSync-West-2018-08-10T08:45:57.1302874Z-08586677161304890397667293020CU05.json</td>
+	<td>08/10/2018 08:45:57 +00:00</td>     
+	<td>File Succeeded</td>
+	<td>1</td>
+  </tr>
+  <tr position="Succeeded">
+     <td>BrandRestriction</td>
+    <td>BrandRestriction-2018-08-10T09:45:04.6952417Z-08586677125830781092443138190CU00.csv</td>
+	<td>08/10/2018 08:45:57 +00:00</td>     
+	<td>File Succeeded</td>
+	<td>1</td>
+  </tr>
+  <tr position="Succeeded">
+     <td>ItemMaster-West</td>
+    <td>ItemMaster-West-2018-08-10T09:00:23.3966653Z-08586677152747992967537213466CU07.csv</td>
+	<td>08/10/2018 08:45:57 +00:00</td>     
+	<td>File Succeeded</td>
+	<td>1</td>
+  </tr>
+  <tr position="Succeeded">
+     <td>CustomerSync-West</td>
+    <td>CustomerSync-West-2018-08-10T08:45:57.1302874Z-08586677161304890397667293020CU05.json</td>
+	<td>08/10/2018 08:45:57 +00:00</td>     
+	<td>File Succeeded</td>
+	<td>1</td>
+  </tr>
+  <tr position="Failed">
+     <td>CustomerSync-West</td>
+    <td>CustomerSync-West-2018-08-10T08:45:57.1302874Z-08586677161304890397667293020CU05.json</td>
+	<td>08/10/2018 08:45:57 +00:00</td>     
+	<td>File Failed</td>
+	<td>0</td>
+  </tr>
+
+
+</table>
+	</div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>   
+	<script src=".\js\jquery.dataTables.min.js"></script>
+	<script src=".\js\dataTables.bootstrap.min.js"></script>
+	<script type="text/javascript" src=".\js\p.js"></script>
+		
+
+	</div>
+   </body>
+</html>

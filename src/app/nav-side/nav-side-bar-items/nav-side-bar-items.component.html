@@ -1,0 +1,4 @@
+<app-nav-side-bar-item [data]="home" (click)="navigate(home)"></app-nav-side-bar-item>
+<div *ngFor="let link of currentLinks" >
+  <app-nav-side-bar-item [data]="link" (click)="navigate(link)"></app-nav-side-bar-item>
+</div>

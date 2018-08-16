@@ -1,0 +1,48 @@
+<div>
+  <h3>The Alerts Received ----> 24 Hour Alert Summary</h3>
+  <form>
+    <div class="form-group">
+      <div class="input-group">
+        <select [(ngModel)]="typeFilter" name="first">
+          <option *ngFor="let item of selectOption" [value]="item.value">
+            {{item.label}}
+          </option>
+        </select>
+        <div class="input-group-addon">
+          <i class="glyphicon glyphicon-search"></i>
+        </div>
+        <input type="text" class="form-control" name="searchString" placeholder="Type to search..." [(ngModel)]="searchString">
+      </div>
+    </div>
+  </form>
+
+  <div class="table-wrapper-scroll-y">
+    <table class="table">
+
+      <tr id="header">
+        <th class="headercolor">Alert Name</th>
+        <th class="headercolor">Description</th>
+        <th class="headercolor">Resource Name</th>
+        <th class="headercolor">Event Time</th>
+        <th class="headercolor">Level Type</th>
+      </tr>
+      <tr *ngFor="let row of list | filter : 'resource_name' : searchString | filter :'level' : typeFilter; let i = index">
+        <td class="text-left">
+          {{row.alert_name}}
+        </td>
+        <td class="text-left">
+          {{row.description}}
+        </td>
+        <td class="text-left">
+          {{row.resource_name}}
+        </td>
+        <td class="text-left">
+          {{row.time}}
+        </td>
+        <td class="text-left">
+          {{row.level}}
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

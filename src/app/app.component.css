@@ -1,0 +1,10 @@
+.wrapper{
+   background-color: #506984;
+}
+.report_container{
+    margin-left: 40%;
+    
+}
+body{
+    min-height: 100vh;
+}

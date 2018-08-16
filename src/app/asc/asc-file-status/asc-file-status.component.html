@@ -1,0 +1,48 @@
+<div>
+  <h3 style="font-family: HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;">ASC File status</h3>
+  <form>
+    <div class="form-group">
+      <div class="input-group">
+        <select [(ngModel)]="typeFilter" name="first">
+          <option *ngFor="let item of selectOption" [value]="item.value">
+            {{item.label}}
+          </option>
+        </select>
+        <div class="input-group-addon">
+          <i class="glyphicon glyphicon-search"></i>
+        </div>
+        <input type="text" class="form-control" name="searchString" placeholder="Type to search..." [(ngModel)]="searchString">
+      </div>
+    </div>
+  </form>
+  <div class="table-wrapper-scroll-y">
+    <table class="table">
+      <tr>
+        <th class="headercolor">Job Name</th>
+        <th class="headercolor">File Name</th>
+        <th class="headercolor">File Date</th>
+        <th class="headercolor">File Status</th>
+        <th class="headercolor">File Count</th>
+      </tr>
+      <tr *ngFor="let row of list | filter : 'name' : searchString | filter :'type' : typeFilter; let i = index">
+        <td class="text-left">
+          {{row.job}}
+        </td>
+        <td class="text-left">
+          {{row.name}}
+        </td>
+        <td class="text-left">
+          {{row.time}}
+        </td>
+        <td class="text-left">
+          {{row.type}}
+        </td>
+        <td class="text-left">
+          {{row.count}}
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+</div>

@@ -1,0 +1,139 @@
+<div>
+  <h3 style="font-family: HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;">ASC File status</h3>
+  <form>
+    <div class="form-group">
+      <div class="input-group">
+        <select [(ngModel)]="typeFilter" name="first">
+          <option *ngFor="let item of selectOption" [value]="item.value">
+            {{item.label}}
+          </option>
+        </select>
+        <div class="input-group-addon">
+          <i class="glyphicon glyphicon-search"></i>
+        </div>
+        <input type="text" class="form-control" name="searchString" placeholder="Type to search..." [(ngModel)]="searchString">
+      </div>
+    </div>
+  </form>
+  <div class="table-wrapper-scroll-y">
+      <table class="table">
+    <tr>
+      <th class="headercolor">Subscription</th>
+      <th class="headercolor">Date</th>
+      <th class="headercolor">RecoveryVaultName</th>
+      <th class="headercolor">VMName</th>
+      <th class="headercolor">Duration</th>
+      <th class="headercolor">Status</th>
+
+    </tr>
+    <tr *ngFor="let row of list | filter : 'recoveryVaultName' : searchString | filter :'status' : typeFilter; let i = index">
+      <td class="text-left">
+        {{row.subscription}}
+      </td>
+      <td class="text-left">
+        {{row.date}}
+      </td>
+      <td class="text-left">
+        {{row.recoveryVaultName}}
+      </td>
+      <td class="text-left">
+        {{row.vmName}}
+      </td>
+      <td class="text-left">
+        {{row.duration}}
+      </td>
+      <td class="text-left">
+        {{row.status}}
+      </td>
+    </tr>
+    <!-- <tr id="header">
+      <th class="headercolor">Subscription</th>
+      <th class="headercolor">Date</th>
+      <th class="headercolor">RecoveryVaultName</th>
+      <th class="headercolor">VMName</th>
+      <th class="headercolor">Duration</th>
+      <th class="headercolor">Status</th>
+    </tr>
+
+
+
+
+    <tr position="CompletedWithWarnings">
+      <td>User - Pay-As-You-Go</td>
+      <td>8/10/2018 8:16:16 AM</td>
+      <td>asc-usr-cus-asr-vlt</td>
+      <td>xaer9lub-fs2</td>
+      <td>03:20:24.9763650</td>
+      <td>CompletedWithWarnings</td>
+    </tr>
+
+
+
+
+    <tr position="InProgress">
+      <td>User - Pay-As-You-Go</td>
+      <td>8/10/2018 9:02:46 AM</td>
+      <td>asc-prd-cus-asr-vlt</td>
+      <td>prd-cus-ims21</td>
+      <td>04:58:27.6063998</td>
+      <td>InProgress</td>
+    </tr>
+    <tr position="CompletedWithWarnings">
+      <td>User - Pay-As-You-Go</td>
+      <td>8/10/2018 8:14:13 AM</td>
+      <td>asc-usr-cus-asr-vlt</td>
+      <td>xaer9lub-fs1</td>
+      <td>03:20:26.5915973</td>
+      <td>Failed</td>
+    </tr>
+    <tr position="Completed">
+      <td>User - Pay-As-You-Go</td>
+      <td>8/10/2018 9:09:15 AM</td>
+      <td>asc-prd-cus-asr-vlt</td>
+      <td>prd-cus-mgt-vm</td>
+      <td>03:20:24.9763650</td>
+      <td>Completed</td>
+    </tr>
+    <tr position="InProgress">
+      <td>User - Pay-As-You-Go</td>
+      <td>8/10/2018 8:16:16 AM</td>
+      <td>asc-prd-cus-asr-vlt</td>
+      <td>prd-cus-sqdr-vm</td>
+      <td>04:53:03.5828094</td>
+      <td>InProgress</td>
+    </tr>
+
+
+    <tr position="Completed">
+      <td>User - Pay-As-You-Go</td>
+      <td>8/10/2018 9:09:15 AM</td>
+      <td>asc-prd-cus-asr-vlt</td>
+      <td>prd-cus-imc-vm</td>
+      <td>03:20:24.9763650</td>
+      <td>Completed</td>
+    </tr>
+
+
+    <tr position="CompletedWithWarnings">
+      <td>User - Pay-As-You-Go</td>
+      <td>8/10/2018 8:14:13 AM</td>
+      <td>asc-usr-cus-asr-vlt</td>
+      <td>xaer9lub-fs1</td>
+      <td>03:20:26.5915973</td>
+      <td>Failed</td>
+    </tr>
+
+    <tr position="CompletedWithWarnings">
+      <td>User - Pay-As-You-Go</td>
+      <td>8/10/2018 8:14:13 AM</td>
+      <td>asc-usr-cus-asr-vlt</td>
+      <td>xaer9lub-fs1</td>
+      <td>03:20:26.5915973</td>
+      <td>CompletedWithWarnings</td>
+    </tr> -->
+
+
+
+  </table>
+
+</div>

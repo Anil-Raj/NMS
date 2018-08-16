@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href=".\css\bootstrap.min.css" rel="stylesheet">
+	<link href=".\css\dataTables.bootstrap.min.css" rel="stylesheet">
+	<link href=".\css\color.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+  </head>
+  <body>
+  <div class="container-fluid">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">	</script>
+	<script language="JavaScript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	 <script src=".\js\bootstrap.min.js"></script>
+	 
+
+	 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <img src=".\img\NMS-Logo.PNG" alt="NMSlogo" style="width:10%;">
+  </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="label label-info" href="./ASC_File_status.htm">Animal Supply Comapany</a>
+    </li>
+    <li class="nav-item">
+      <a class="label label-info p" href="./Rand.html">Rand Financials</a>
+    </li>
+    <li class="nav-item">
+      <a class="label label-info p" href="./TTX.html"> <b>TTX </b></a>
+    </li>
+  </ul>
+</nav>
+
+	
+	<div class="row">
+    <div class="col-sm-3 col-md-6 col-lg-3">
+    				
+                 <ul class="nav nav-pills nav-stacked">
+						<li id="reportlist" ><a href="./ASC_File_status.htm">ASC File status</a></li>
+						<li id="reportlist"><a href="./Recovery_Services_Vaults_Backup_job_status.htm">Recovery Services Vaults Backup job status</a></li>
+						<li id="reportlist"><a href="./Daily_Alert_history_check.htm">Daily Alert history check</a></li>
+				</ul>
+    </div>
+    <div class="col-sm-9 col-md-6 col-lg-9">
+   <h3>The Alerts Received ----> 24 Hour Alert Summary</h3>
+	<select id="selectfield">
+	<option value="All" selected="selected" >All</option>
+	<option value="Informational">Informational</option>
+	<option value="Warning">Warning</option>
+    </select>	
+
+	&nbsp&nbsp&nbsp<input type="text" id="myInput" placeholder="Please enter the value for search.....">
+	</br></br></br>
+	<table class="table table-bordered" id="mydata">
+
+	<tr id="header">
+    <th class="headercolor">Alert Name</th>
+    <th class="headercolor">Description</th> 
+    <th class="headercolor">Resource Name</th>
+	<th class="headercolor">Event Time</th>
+	<th class="headercolor">Level Type</th>			
+    </tr>
+
+					
+
+
+<tr position="Informational">
+    <td>p-ecomm-InvOrdDrillData-la-frm</td>
+   	<td>'RunsFailed GreaterThanOrEqual 1 ([]) in the last 5 minutes' has been resolved for workflows: asc-prd-cus-ecomm-invoices-getorderdrilldowndata-la (asc-prd-cus-ecomm-rg)</td>
+    <td>asc-prd-cus-ecomm-invoices-getorderdrilldowndata-la</td>
+	<td>08/09/2018 19:25:50	</td> 
+  	<td>Informational</td>
+  </tr>
+
+ 			
+  <tr position="Warning">
+    <td>p-ERPAS400EUS2West-db-dpm</td>
+   	<td>'DTU percentage GreaterThanOrEqual 90 ([Percent]) in the last 15 minutes' was activated for servers: asc-prd-eus2-erp-dbs (asc-prd-cus-data-rg)</td>
+    <td>asc-prd-eus2-erp-dbs </td>
+	<td>08/10/2018 06:16:10</td> 
+   	<td>Warning</td>
+  </tr>
+   <tr position="Warning">
+    <td>CPU Pct Max ? Prd CUS Mgt VM</td>
+    <td>'Percentage CPU GreaterThan 75 ([]) in the last 10 minutes' was activated for virtualMachines: prd-cus-mgt-vm (asc-prd-cus-mgt-rg)</td>
+	<td>prd-cus-mgt-vm </td> 
+    <td>08/09/2018 20:46:22</td>
+	<td>Warning</td>
+  </tr>
+   <tr position="Informational">
+    <td>CPU Pct Max ? Prd CUS PIM Wb VM1</td>
+	<td>'Percentage CPU GreaterThan 75 ([]) in the last 10 minutes' has been resolved for virtualMachines: prd-cus-pimwb01 (asc-prd-cus-pim-rg)</td> 
+    <td>prd-cus-pimwb01</td>
+	 <td>08/09/2018 15:10:47</td>
+	<td>Informational</td>
+  </tr> 
+
+
+</table>
+    </div>
+  </div>
+
+
+
+
+
+
+	
+	
+
+    <script src="http://code.jquery.com/jquery.js"></script>   
+	<script src=".\js\jquery.dataTables.min.js"></script>
+	<script src=".\js\dataTables.bootstrap.min.js"></script>
+	<script type="text/javascript" src=".\js\p.js"></script>
+		
+
+	</div>
+   </body>
+</html>

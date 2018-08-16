@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href=".\css\bootstrap.min.css" rel="stylesheet">
+	<link href=".\css\dataTables.bootstrap.min.css" rel="stylesheet">
+	<link href=".\css\color.css" rel="stylesheet">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  
+
+
+  </head>
+  <body>
+  <div class="container-fluid">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">	</script>
+	<script language="JavaScript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src=".\js\bootstrap.min.js"></script>
+
+	
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <img src=".\img\NMS-Logo.PNG" alt="NMSlogo" style="width:10%;">
+  </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="label label-info" href="./ASC_File_status.htm">Animal Supply Comapany</a>
+    </li>
+    <li class="nav-item">
+      <a class="label label-info p" href="./Rand.html">Rand Financials</a>
+    </li>
+    <li class="nav-item">
+      <a class="label label-info p" href="./TTX.html"> <b>TTX </b></a>
+    </li>
+  </ul>
+</nav>
+
+
+   <div class="row">
+    <div class="col-sm-3 col-md-6 col-lg-3">
+	                <ul class="nav nav-pills nav-stacked">
+						<li id="reportlist"><a href="./ASC_File_status.htm">ASC File status</a></li>
+						<li id="reportlist"><a href="./Recovery_Services_Vaults_Backup_job_status.htm">Recovery Services Vaults Backup job status</a></li>
+						<li id="reportlist"><a href="./Daily_Alert_history_check.htm">Daily Alert history check</a></li>
+				   </ul>
+    </div>
+
+
+
+    <div class="col-sm-9 col-md-6 col-lg-9">
+   <h3>RecoveryServicesVaults Backup jobs status</h3>
+	<select id="selectfield">
+	<option value="All" selected="selected" >All</option>
+	<option value="InProgress">InProgress</option>
+	<option value="Completed">Completed</option>
+	<option value="Failed">Failed</option>
+	<option value="CompletedWithWarnings">CompletedWithWarnings</option>
+	</select>	
+
+	&nbsp&nbsp&nbsp<input type="text" id="myInput" placeholder="Please enter the value for search.....">
+	</br></br></br>
+	<table class="table table-bordered" id="mydata">
+
+	<tr id="header">
+    <th class="headercolor">Subscription</th>
+    <th class="headercolor">Date</th> 
+    <th class="headercolor">RecoveryVaultName</th>
+	<th class="headercolor">VMName</th>
+	<th class="headercolor">Duration</th>
+	<th class="headercolor">Status</th>						
+    </tr>
+
+
+
+
+<tr position="CompletedWithWarnings">
+    <td>User - Pay-As-You-Go</td>
+   	<td>8/10/2018 8:16:16 AM</td>
+    <td>asc-usr-cus-asr-vlt</td>
+	<td>xaer9lub-fs2</td> 
+    <td>03:20:24.9763650</td>
+	<td>CompletedWithWarnings</td>
+  </tr>
+
+
+
+ 			
+  <tr position="InProgress">
+    <td>User - Pay-As-You-Go</td>
+   	<td>8/10/2018 9:02:46 AM</td>
+    <td>asc-prd-cus-asr-vlt</td>
+	<td>prd-cus-ims21</td> 
+    <td>04:58:27.6063998</td>
+	<td>InProgress</td>
+  </tr>
+   <tr position="CompletedWithWarnings">
+    <td>User - Pay-As-You-Go</td>
+   	<td>8/10/2018 8:14:13 AM</td>
+    <td>asc-usr-cus-asr-vlt</td>
+	<td>xaer9lub-fs1</td> 
+    <td>03:20:26.5915973</td>
+	<td>Failed</td>
+  </tr>
+   <tr position="Completed">
+    <td>User - Pay-As-You-Go</td>
+   	<td>8/10/2018 9:09:15 AM</td>
+    <td>asc-prd-cus-asr-vlt</td>
+	<td>prd-cus-mgt-vm</td> 
+    <td>03:20:24.9763650</td>
+	<td>Completed</td>
+  </tr>
+  <tr position="InProgress">
+    <td>User - Pay-As-You-Go</td>
+   	<td>8/10/2018 8:16:16 AM</td>
+    <td>asc-prd-cus-asr-vlt</td>
+	<td>prd-cus-sqdr-vm</td> 
+    <td>04:53:03.5828094</td>
+	<td>InProgress</td>
+  </tr>
+
+
+  <tr position="Completed">
+    <td>User - Pay-As-You-Go</td>
+   	<td>8/10/2018 9:09:15 AM</td>
+    <td>asc-prd-cus-asr-vlt</td>
+	<td>prd-cus-imc-vm</td> 
+    <td>03:20:24.9763650</td>
+	<td>Completed</td>
+  </tr>
+
+
+   <tr position="CompletedWithWarnings">
+    <td>User - Pay-As-You-Go</td>
+   	<td>8/10/2018 8:14:13 AM</td>
+    <td>asc-usr-cus-asr-vlt</td>
+	<td>xaer9lub-fs1</td> 
+    <td>03:20:26.5915973</td>
+	<td>Failed</td>
+  </tr>
+  
+  <tr position="CompletedWithWarnings">
+    <td>User - Pay-As-You-Go</td>
+   	<td>8/10/2018 8:14:13 AM</td>
+    <td>asc-usr-cus-asr-vlt</td>
+	<td>xaer9lub-fs1</td> 
+    <td>03:20:26.5915973</td>
+	<td>CompletedWithWarnings</td>
+  </tr>
+ 
+
+
+</table>
+    </div>
+  </div>
+
+  
+
+    <script src="http://code.jquery.com/jquery.js"></script>   
+	<script src=".\js\jquery.dataTables.min.js"></script>
+	<script src=".\js\dataTables.bootstrap.min.js"></script>
+	<script type="text/javascript" src=".\js\p.js"></script>
+		
+
+	</div>
+   </body>
+</html>

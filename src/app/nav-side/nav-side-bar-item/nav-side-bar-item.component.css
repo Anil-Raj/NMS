@@ -1,0 +1,22 @@
+span{
+    color:#eff4fa;
+    position: relative;
+}
+
+label{
+    padding: 25px;
+    height: 72px;
+    border-bottom: 1px solid #2f3f4f;
+    position: relative;
+    width: 100%;
+    -webkit-transition: text-indent .15s, height .3s;
+    transition: text-indent .15s, height .3s;
+    box-sizing: border-box;
+    margin-bottom: 0px;
+}
+
+label:hover, label:focus, label.active{
+        background: #212e41;
+        border-bottom: 1px solid #355789;
+        text-indent: 4px;
+}
